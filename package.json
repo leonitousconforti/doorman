@@ -1,0 +1,36 @@
+{
+    "name": "template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/main.ts",
+    "type": "module",
+    "scripts": {
+        "lint": "eslint .",
+        "build": "tsc",
+        "test": "c8 tap",
+        "clean": "rimraf build"
+    },
+    "keywords": [],
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "@types/should": "^13.0.0",
+        "@types/tap": "^15.0.7",
+        "@typescript-eslint/eslint-plugin": "^5.28.0",
+        "@typescript-eslint/parser": "^5.28.0",
+        "c8": "^7.11.3",
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-unicorn": "^42.0.0",
+        "prettier": "^2.7.1",
+        "rimraf": "^3.0.2",
+        "should": "^13.2.3",
+        "tap": "^16.3.0",
+        "tap-yaml": "^1.0.0",
+        "ts-node": "^10.8.1",
+        "typescript": "^4.7.3"
+    },
+    "packageManager": "yarn@3.2.1"
+}

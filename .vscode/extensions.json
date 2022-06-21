@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "kisstkondoros.vscode-codemetrics",
+        "visualstudioexptteam.vscodeintellicode",
+        "arcanis.vscode-zipfs",
+        "esbenp.prettier-vscode",
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker",
+        "eg2.vscode-npm-script",
+        "christian-kohler.npm-intellisense"
+    ]
+}

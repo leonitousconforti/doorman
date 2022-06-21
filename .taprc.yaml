@@ -1,0 +1,6 @@
+ts: true
+node-arg: ["--loader=ts-node/esm", "--no-warnings"]
+watch: false
+
+# https://github.com/tapjs/node-tap/issues/813
+coverage: false
