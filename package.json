@@ -1,21 +1,26 @@
 {
-    "name": "template",
-    "version": "1.0.0",
-    "description": "",
+    "name": "@tinyburg/doorman",
+    "version": "0.0.1",
+    "description": "Your friendly TinyTower doorman. Helps you with tasks such as moving bitizens up your elevator, restocking floors, building floors, rebuilding, and much more",
     "main": "src/main.ts",
     "type": "module",
     "scripts": {
         "lint": "eslint .",
         "build": "tsc",
         "test": "c8 tap",
-        "clean": "rimraf build"
+        "clean": "rimraf dist && rimraf coverage",
+        "generate-protobuf-types": "proto-loader-gen-types --outDir=./src/proto/generated --includeComments --grpcLib=@grpc/grpc-js ./proto/emulator_controller.proto"
     },
-    "keywords": [],
+    "keywords": [
+        "TinyTower",
+        "Tiny Tower"
+    ],
     "license": "MIT",
     "devDependencies": {
         "@swc/core": "^1.2.204",
         "@swc/helpers": "^0.4.2",
         "@types/node": "^18.0.0",
+        "@types/sharp": "^0",
         "@types/tap": "^15.0.7",
         "@typescript-eslint/eslint-plugin": "^5.28.0",
         "@typescript-eslint/parser": "^5.28.0",
@@ -27,10 +32,15 @@
         "eslint-plugin-unicorn": "^42.0.0",
         "prettier": "^2.7.1",
         "rimraf": "^3.0.2",
+        "sharp": "^0.30.6",
         "tap": "^16.3.0",
         "tap-yaml": "^1.0.0",
         "ts-node": "^10.8.1",
         "typescript": "^4.7.3"
+    },
+    "dependencies": {
+        "@grpc/grpc-js": "^1.6.7",
+        "@grpc/proto-loader": "^0.6.13"
     },
     "packageManager": "yarn@3.2.1"
 }
