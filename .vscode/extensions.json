@@ -8,6 +8,7 @@
         "editorconfig.editorconfig",
         "streetsidesoftware.code-spell-checker",
         "eg2.vscode-npm-script",
-        "christian-kohler.npm-intellisense"
+        "christian-kohler.npm-intellisense",
+        "peterj.proto"
     ]
 }
