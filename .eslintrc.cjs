@@ -24,5 +24,5 @@ module.exports = {
         quotes: ["error", "double"],
         semi: ["error", "always"],
     },
-    ignorePatterns: ["build/"],
+    ignorePatterns: ["build/", "src/proto/generated/"],
 };

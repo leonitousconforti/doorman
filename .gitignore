@@ -9,9 +9,12 @@
 node_modules/
 
 # Typescript and tap output
-/build/
+/dist/
 /.nyc_output/
 /coverage/
+
+# Generated protobuf types
+/src/proto/generated/
 
 # Banish DS_Store
 /.DS_Store
