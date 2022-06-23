@@ -8,7 +8,11 @@
         "lint": "eslint .",
         "build": "tsc",
         "test": "c8 tap",
-        "clean": "rimraf dist && rimraf coverage",
+        "clean:typescript": "rimraf dist && rimraf coverage",
+        "clean:protobuf-types": "rimraf src/proto/generated",
+        "clean:templates": "rimraf templates/metadata templates/png templates/raw",
+        "clean:all": "yarn clean:typescript && yarn clean:protobuf-types && yarn clean:templates",
+        "generate-templates": "ts-node ./templates/generate.ts",
         "generate-protobuf-types": "proto-loader-gen-types --outDir=./src/proto/generated --includeComments --grpcLib=@grpc/grpc-js ./proto/emulator_controller.proto"
     },
     "keywords": [

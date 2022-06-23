@@ -16,6 +16,12 @@ node_modules/
 # Generated protobuf types
 /src/proto/generated/
 
+# Template stuff
+/templates/png
+/templates/raw
+/templates/metadata
+/templates/game.*
+
 # Banish DS_Store
 /.DS_Store
 */.DS_Store

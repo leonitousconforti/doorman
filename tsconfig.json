@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
         "target": "es2022",
-        "module": "es2022",
+        "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "outDir": "./dist",
