@@ -12,8 +12,8 @@ export type Match = {
 
 // Specify how the template image can land in the search image
 export interface OrientationOptions {
-    overlapVertically?: boolean;
-    overlapHorizontally?: boolean;
+    noOverlapVertically?: boolean;
+    noOverlapHorizontally?: boolean;
 }
 
 // The largest search image and template image domains. Node.js can't
@@ -76,8 +76,8 @@ export const matchTemplate = (
     // orientation of the template image in the search image. If the template image can't
     // overlap with itself horizontally, then the search region advances by the template
     // image's width. Likewise for if the template image can't overlap itself vertically.
-    const searchAdvanceX = orientationOptions?.overlapHorizontally ? templateImage.width : 1;
-    const searchAdvanceY = orientationOptions?.overlapVertically ? templateImage.height : 1;
+    const searchAdvanceX = orientationOptions?.noOverlapHorizontally ? templateImage.width : 1;
+    const searchAdvanceY = orientationOptions?.noOverlapVertically ? templateImage.height : 1;
 
     // Loop through the search image
     for (let s_y = 0; s_y <= searchImage.height - templateImage.height; s_y += searchAdvanceY) {

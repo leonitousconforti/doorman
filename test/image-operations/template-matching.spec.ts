@@ -78,8 +78,8 @@ test("Should work with large images but triggers warning about domain", async (t
 
 test("Should use orientation options", async (t) => {
     const matches = matchTemplate(searchImage1, templateImage1, undefined, {
-        overlapHorizontally: true,
-        overlapVertically: true,
+        noOverlapHorizontally: true,
+        noOverlapVertically: true,
     });
     t.equal(matches.length, 1, "expect one match");
     t.strictSame(
