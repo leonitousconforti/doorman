@@ -7,7 +7,7 @@
     "scripts": {
         "lint": "eslint .",
         "build": "tsc",
-        "test": "c8 tap",
+        "test": "c8 tap test/**/*.spec.ts",
         "clean:typescript": "rimraf dist && rimraf coverage",
         "clean:protobuf-types": "rimraf src/proto/generated",
         "clean:templates": "rimraf templates/metadata templates/png templates/raw",
