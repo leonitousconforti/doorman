@@ -783,6 +783,7 @@ __metadata:
     "@swc/core": ^1.2.204
     "@swc/helpers": ^0.4.2
     "@types/node": ^18.0.0
+    "@types/prettier": ^2.6.3
     "@types/sharp": ^0
     "@types/tap": ^15.0.7
     "@typescript-eslint/eslint-plugin": ^5.28.0
@@ -870,6 +871,13 @@ __metadata:
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
   checksum: e87bccbf11f95035c89a132b52b79ce69a1e3652fe55962363063c9c0dae0fe2477ebc585e03a9652adc6f381d24ba5589cc5e51849df4ced3d3e004a7d40ed5
+  languageName: node
+  linkType: hard
+
+"@types/prettier@npm:^2.6.3":
+  version: 2.6.3
+  resolution: "@types/prettier@npm:2.6.3"
+  checksum: e1836699ca189fff6d2a73dc22e028b6a6f693ed1180d5998ac29fa197caf8f85aa92cb38db642e4a370e616b451cb5722ad2395dab11c78e025a1455f37d1f0
   languageName: node
   linkType: hard
 

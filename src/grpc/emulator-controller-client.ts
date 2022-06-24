@@ -17,4 +17,5 @@ export const createEmulatorControllerClient = (
     address: string,
     credentials: grpc.ChannelCredentials = grpc.credentials.createInsecure(),
     options?: grpc.ClientOptions
-): EmulatorControllerClient => new EmulatorController(address, credentials, options);
+): EmulatorControllerClient =>
+    new EmulatorController(address, credentials, { "grpc.max_receive_message_length": 12 * 1024 * 1024, ...options });
