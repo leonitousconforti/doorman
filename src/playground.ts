@@ -1,5 +1,6 @@
 import { ImageType } from "./image-operations/image.js";
 import { getScreenshot } from "./grpc/get-screenshots.js";
+import { Touch, sendTouches } from "./grpc/send-touch.js";
 import { emulatorAddress } from "../config/emulator-host.js";
 import { dropChannel } from "./image-operations/drop-channel.js";
 import { upscaleImage } from "./image-operations/upscale-image.js";
@@ -38,4 +39,26 @@ const matches = matchTemplate(
     elevatorRiderButtonMask,
     orientationOptions
 );
-console.log(matches);
+if (!matches[0]) {
+    throw new Error("no matches found");
+}
+const match = matches[0];
+console.log(match);
+
+// Send touches to press note
+const firstTouch: Touch = {
+    x: match.position.x + scaledElevatorRiderTemplate.width / 2,
+    y: match.position.y + cropRegion.top + scaledElevatorRiderTemplate.height / 2,
+    pressure: 4,
+    expiration: "EVENT_EXPIRATION_UNSPECIFIED",
+    timeout: 1000,
+};
+const secondTouch: Touch = {
+    x: match.position.x + scaledElevatorRiderTemplate.width / 2,
+    y: match.position.y + cropRegion.top + scaledElevatorRiderTemplate.height / 2,
+    pressure: 0,
+    expiration: "EVENT_EXPIRATION_UNSPECIFIED",
+};
+console.log(firstTouch);
+console.log(secondTouch);
+await sendTouches(client, [firstTouch, secondTouch]);
